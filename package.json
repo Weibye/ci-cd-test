@@ -21,14 +21,7 @@
   },
   "homepage": "https://github.com/Weibye/ci-cd-test#readme",
   "release": {
-    "branches": [
-      "main",
-      "release",
-      {
-        "name": "beta",
-        "prerelease": true
-      }
-    ],
+    "branches": ["release"],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
