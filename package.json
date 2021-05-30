@@ -1,5 +1,38 @@
 {
   "devDependencies": {
+    "@semantic-release/git": "^9.0.0",
     "semantic-release": "^17.4.3"
+  },
+  "name": "ci-cd-test",
+  "version": "1.0.0",
+  "description": "A simple test setup",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Weibye/ci-cd-test.git"
+  },
+  "author": "Andreas Weibye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Weibye/ci-cd-test/issues"
+  },
+  "homepage": "https://github.com/Weibye/ci-cd-test#readme",
+  "release": {
+    "branches": [
+      "main",
+      "next",
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/git"
+    ]
   }
 }
